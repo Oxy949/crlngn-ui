@@ -55,6 +55,20 @@ body.crlngn-ui{
     gap: 0;
   }
 
+  /*DH Roll Button */
+  .dr-quick-button-container button {
+    border-top-left-radius: 0;
+  }
+
+  .dr-quick-button-container {
+    margin: 0;
+  }
+
+  .dr-quick-button-container button img {
+    width: 18px !important;
+    height: unset !important;
+  }
+
   /* Dice Tray */
   &.crlngn-dice-calculator{
 
@@ -62,7 +76,9 @@ body.crlngn-ui{
       margin: 0;
     }
     .dice-tray {
-      margin-top: 0;
+      margin-top: -8px;
+      padding: 8px;
+      padding-top: 0;
       button {
         border-radius: 0;
         box-shadow: 0 0 6px inset var(--color-secondary);

@@ -250,9 +250,9 @@ body.crlngn-ui.system-daggerheart {
     color: light-dark(var(--dark-blue), var(--color-warm-2));
   }
 
-  /* Generic .dh-style base border */
-  .dh-style:not(.application.sheet) {
-    border: 1px solid light-dark(var(--dark-blue), var(--color-warm-2));
+  /* Recolor window borders without adding borders to reusable sheet components. */
+  .application.dh-style:not(.sheet) {
+    border-color: light-dark(var(--dark-blue), var(--color-warm-2));
   }
 
   /* Level up views */
@@ -750,6 +750,21 @@ body.crlngn-ui.system-daggerheart {
   }
 
   /* Tooltips */
+  /* Cards and embeds paint their own frame; keep the tooltip wrapper invisible. */
+  #tooltip:has(.dh-card, .embed),
+  .locked-tooltip:has(.dh-card, .embed) {
+    padding: 0;
+    border: none;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    overflow: visible;
+
+    > div, > p, > section, > button, > span {
+      padding: 0;
+    }
+  }
+
   .daggerheart.dh-style.tooltip .tooltip-title-container .tooltip-image {
     border: 1px solid var(--color-warm-2);
   }

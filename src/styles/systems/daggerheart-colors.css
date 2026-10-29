@@ -724,9 +724,9 @@ body.crlngn-ui.system-daggerheart .application.dialog.dh-style .window-header bu
   color: light-dark(var(--dark-blue), var(--color-warm-2));
 }
 
-/* Generic .dh-style base border - applies to all */
-body.crlngn-ui.system-daggerheart .dh-style:not(.application.sheet) {
-  border: 1px solid light-dark(var(--dark-blue), var(--color-warm-2));
+/* Only recolor application borders; sheet components do not need a frame. */
+body.crlngn-ui.system-daggerheart .application.dh-style:not(.sheet) {
+  border-color: light-dark(var(--dark-blue), var(--color-warm-2));
 }
 
 /* Form element styles for non-sheet elements (dialogs, etc.) - always apply */
